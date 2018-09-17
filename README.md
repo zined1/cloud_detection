@@ -8,7 +8,7 @@ K-means algorithm for cloud detection using this paper
 
 ## Results
 
-These results are obtained by taking the 2 highest classes
+These results are obtained by taking the 2 highest classes among 8
 
 ![First Result](res/first_result.png?raw=true)
 
