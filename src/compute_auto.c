@@ -17,10 +17,8 @@ float ComputeImageAuto(guchar *pucImaOrig, int NbLine, int NbCol, guchar *pucIma
   int** Vs = malloc(sizeof(*Vs) * NbLine * NbCol);
   kMeans(Vs, iNbPixelsTotal, pucImaRes, iNbChannels, nbClasse, NbCol, NbLine);
   for (iNumPix = 0; iNumPix < iNbPixelsTotal * iNbChannels; iNumPix = iNumPix + iNbChannels)
-  {
     Vs[iNumPix / 3][6] >= (threshold - 1) ? count++ : count;
-  }
-  return count*100/iNbPixelsTotal;
+  return count* 100 / iNbPixelsTotal;
 }
 
 float calculPercentage(char* name, int nbClasse, int threshold)
@@ -36,10 +34,9 @@ float calculPercentage(char* name, int nbClasse, int threshold)
     exit(1);
   }
   guchar *pucImaOrig = gdk_pixbuf_get_pixels(pixbuf);
-  guchar *pucImaRes =gdk_pixbuf_get_pixels(pixbuf);
-  int NbCol, NbLine;
-  NbCol = gdk_pixbuf_get_width(pixbuf);
-  NbLine = gdk_pixbuf_get_height(pixbuf);
+  guchar *pucImaRes = gdk_pixbuf_get_pixels(pixbuf);
+  int NbCol = gdk_pixbuf_get_width(pixbuf);
+  int NbLine = gdk_pixbuf_get_height(pixbuf);
 
   return ComputeImageAuto(pucImaOrig, NbLine, NbCol, pucImaRes, nbClasse, threshold);
 }
@@ -49,8 +46,10 @@ void printAllPercentage(int nbClasse, int threshold)
   DIR *d;
   struct dirent *dir;
   d = opendir(".");
-  if (d) {
-    while ((dir = readdir(d)) != NULL) {
+  if (d)
+  {
+    while ((dir = readdir(d)) != NULL)
+    {
       char *pch = strrchr(dir->d_name, '.');
       if (pch && (strcmp(pch, ".bmp") == 0 || strcmp(pch, ".jpg") == 0 || strcmp(pch, ".png") == 0))
         printf("%s => %f%%\n", dir->d_name, calculPercentage(dir->d_name, nbClasse, threshold));
@@ -61,9 +60,9 @@ void printAllPercentage(int nbClasse, int threshold)
 
 int main(int argc, char* argv[])
 {
-  if (argc == 3)
+  if (argc == 3) // Choose the number of classes and threshold
     printAllPercentage(atoi(argv[1]), atoi(argv[2]));
   else
     printAllPercentage(8, 7);
-  return(0);
+  return 0;
 }
