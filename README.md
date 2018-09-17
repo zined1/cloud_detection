@@ -1,11 +1,3 @@
-  _______   _      _____       _            _   _             
- |__   __| | |    |  __ \     | |          | | (_)            
-    | | ___| | ___| |  | | ___| |_ ___  ___| |_ _  ___  _ __  
-    | |/ _ \ |/ _ \ |  | |/ _ \ __/ _ \/ __| __| |/ _ \| '_ \ 
-    | |  __/ |  __/ |__| |  __/ ||  __/ (__| |_| | (_) | | | |
-    |_|\___|_|\___|_____/ \___|\__\___|\___|\__|_|\___/|_| |_|
-
-
 # Cloud detection using K-means algorithm
 
 ## Subject
@@ -18,11 +10,11 @@ K-means algorithm for cloud detection using this paper
 
 These results are obtained by taking the 2 highest classes
 
-![First Result](result/first_result.png?raw=true)
+![First Result](res/first_result.png?raw=true)
 
 Percent of clouds: 0.98 %
 
-![Second Result](result/second_result.png?raw=true)
+![Second Result](res/second_result.png?raw=true)
 
 Percent of clouds: 5.02 %
 
