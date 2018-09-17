@@ -1,12 +1,8 @@
-
-#makefile permettant la compilation du programme principal
-#---------------------------------------------------------
 .KEEP_STATE:
 
-#definition des variables
 CC=gcc
 OBJ=../obj
-EXE=../bin
+EXE=..
 CCFLAGS=-Wall -g `pkg-config --cflags gtk+-2.0`
 LDFLAGS=-lm `pkg-config --libs gtk+-2.0`
 
@@ -28,7 +24,7 @@ imaProjet_auto.exe:${OBJ_FILES_AUTO}
 	mv *.o ${OBJ}
 
 clean:
-	\rm -f ${OBJ}/*.o ../*/core ${EXE}/*.exe
+	\rm -f ${OBJ}/*.o ./*/core ${EXE}/*.exe
 
 install:
 	cp *.h ${INC}
