@@ -1,6 +1,6 @@
 # Cloud detection using K-means algorithm
 
-## Subject
+## Resume
 
 K-means algorithm for cloud detection using this paper
 
