@@ -1,21 +1,37 @@
-# Cloud detection using K-means algorithm
+# Cloud detection in optical satellite images
+## Introduction
 
-## Resume
+This paper is an implementation of [Introducing spatial information in k-means algorithm for cloud detection in optical satellite images](http://adsabs.harvard.edu/abs/2001SPIE.4168...67B).
 
-K-means algorithm for cloud detection using this paper
+Here below, some examples:
 
-[Introducing spatial information in k-means algorithm for cloud detection in optical satellite images](http://adsabs.harvard.edu/abs/2001SPIE.4168...67B).
+The output corresponds to the percentage of clouds in images
 
-## Results
+![Example 1](res/first_result.png?raw=true)
 
-These results are obtained by taking the 2 highest classes among 8
+![Example 2](res/second_result.png?raw=true)
 
-![First Result](res/first_result.png?raw=true)
+Output : 
+```Shell
+30312549607241130511x.bmp => 21.949615%
+36683199502211443252x.bmp => 0.981154%
+```
 
-Percent of clouds: 5.02 %
+## Installation
 
-![Second Result](res/second_result.png?raw=true)
++ Clone the repository
 
-Percent of clouds: 0.98 %
-
-
+```Shell
+git clone https://github.com/zined1/cloud_detection.git
+cd cloud_detection 
+mkdir obj
+```
++ Build
+```Shell
+cd src
+make
+```
++ Run 
+```Shell
+./imaProjet.exe
+```
