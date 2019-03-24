@@ -12,10 +12,10 @@ These results are obtained by taking the 2 highest classes among 8
 
 ![First Result](res/first_result.png?raw=true)
 
-Percent of clouds: 0.98 %
+Percent of clouds: 5.02 %
 
 ![Second Result](res/second_result.png?raw=true)
 
-Percent of clouds: 5.02 %
+Percent of clouds: 0.98 %
 
 
