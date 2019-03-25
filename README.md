@@ -1,7 +1,7 @@
 # Cloud detection in optical satellite images
 ## Introduction
 
-This paper is an implementation of [Introducing spatial information in k-means algorithm for cloud detection in optical satellite images](http://adsabs.harvard.edu/abs/2001SPIE.4168...67B).
+This repository is an implementation of [Introducing spatial information in k-means algorithm for cloud detection in optical satellite images](http://adsabs.harvard.edu/abs/2001SPIE.4168...67B).
 
 Here below, some examples:
 
